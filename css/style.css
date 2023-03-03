@@ -99,7 +99,7 @@ h1 {
     color: #e10600;
 }
 
-.descripcion{
+.descripcion {
     display: flex;
     flex-direction: column;
 }
