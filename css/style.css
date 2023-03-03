@@ -332,6 +332,10 @@ video {
     background-color: white;
 }
 
+.sobreMi article:nth-of-type(2) h2 {
+    padding: 4rem 4rem 2rem 4rem;
+}
+
 .sobreMi p {
     font-size: 1.2rem;
 }
