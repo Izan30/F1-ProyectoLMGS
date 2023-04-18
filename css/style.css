@@ -1,0 +1,440 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ----- CONTENEDOR ----- */
+.contenedor {
+    display: grid;
+    grid-template-areas: "cabecera"
+        "main"
+        "footer";
+}
+
+/* ----- CABECERA ----- */
+.cabecera {
+    display: grid;
+    grid-area: cabecera;
+    grid-template-areas: "header"
+        "nav";
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+/* ----- HEADER ----- */
+header {
+    display: flex;
+    grid-area: header;
+    height: 10vh;
+    justify-content: center;
+    align-items: center;
+    background-color: #e10600;
+}
+
+header img {
+    height: 5vh;
+}
+
+/* ----- NAV ----- */
+nav {
+    display: flex;
+    grid-area: nav;
+    background-color: black;
+    height: 3rem;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.3rem;
+    padding: 0.75rem 2rem 0.81rem 2rem;
+    transition: 0.5s;
+}
+
+nav a:hover {
+    color: white;
+    background-color: #e10600;
+}
+
+.active {
+    color: black;
+    background-color: white;
+}
+
+/* ----- MAIN ----- */
+main {
+    display: grid;
+    grid-area: main;
+    grid-template-areas: "section aside";
+    grid-template-columns: 80% 20%;
+    padding: 1rem;
+}
+
+h2 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+/* ----- SECTION ----- */
+section {
+    grid-area: section;
+    padding-right: 1rem;
+}
+
+/* ----- ARTICLE.DESCRIPCION ----- */
+h1 {
+    font-size: 3rem;
+    text-align: center;
+    text-decoration: underline;
+    margin: 1rem 2rem 2rem 2rem;
+    color: #e10600;
+}
+
+.descripcion {
+    display: flex;
+    flex-direction: column;
+}
+
+.descripcion a {
+    font-weight: bold;
+    color: black;
+}
+
+.descripcion p {
+    font-size: 1.2rem;
+    text-align: justify;
+    line-height: 1.6rem;
+}
+
+.descripcion img {
+    width: 75%;
+    padding-bottom: 1rem;
+    margin: 0 auto;
+}
+
+/* ----- ARTICLE ESCUDERIAS ----- */
+section article:nth-of-type(2) h2 {
+    border-top: 3px solid #e10600;
+    padding: 4rem 4rem 2rem 4rem;
+}
+
+.escuderias {
+    display: flex;
+    align-items: center;
+    border-top: 10px groove #e10600;
+    border-right: 10px groove #e10600;
+    background-color: lightgray;
+    margin-bottom: 3rem;
+}
+
+.escuderias img {
+    width: 30rem;
+}
+
+.texto {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.texto h3 {
+    font-size: 1.7rem;
+    color: darkred;
+    text-align: center;
+}
+
+.texto ul,
+.texto p {
+    padding: 1rem;
+    list-style: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+/* ----- ASIDE ----- */
+aside {
+    display: flex;
+    grid-area: aside;
+    flex-direction: column;
+    height: 64vh;
+    gap: 2rem;
+    position: sticky;
+    top: 19.6vh;
+}
+
+aside h2 {
+    border-top: 2px dashed #e10600;
+    border-left: 2px dashed #e10600;
+    border-right: 2px dashed #e10600;
+}
+
+aside iframe {
+    border: 0.1px solid #e10600;
+    border-left: 10px ridge #e10600;
+    border-bottom: 10px ridge #e10600;
+    border-radius: 0 5rem;
+    height: 100%;
+}
+
+/* ----- FOOTER ----- */
+
+footer {
+    display: grid;
+    grid-area: footer;
+    grid-template-areas: "contacto redes"
+        "mapa mapa";
+    background: linear-gradient(180deg, #38383f, #15151e);
+    color: white;
+}
+
+footer div {
+    padding: 1rem;
+    width: 100%;
+}
+
+footer h4 {
+    font-size: 1.1rem;
+}
+
+.contacto {
+    grid-area: contacto;
+}
+
+.redesSociales {
+    display: flex;
+    grid-area: redes;
+    flex-direction: column;
+}
+
+.redesSociales h4 {
+    text-align: right;
+}
+
+footer a {
+    color: white;
+}
+
+.iconosRRSS {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    padding-right: 0;
+}
+
+.iconosRRSS img {
+    width: 2rem;
+    height: 2rem;
+}
+
+.iconosRRSS a {
+    transition: 1s;
+}
+
+.iconosRRSS a:hover {
+    transform: scale(1.5);
+}
+
+footer iframe {
+    grid-area: mapa;
+    padding: 1rem;
+    border: 0;
+    height: 100%;
+    width: 100%;
+}
+
+/* ----- FORMULARIO ----- */
+
+form p,
+legend {
+    padding: 0.5rem 0;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+input,
+select {
+    font-size: 1rem;
+}
+
+.btn {
+    padding: 0.5rem;
+    background-color: #e10600;
+    color: white;
+}
+
+.sectionForm {
+    margin-bottom: 3rem;
+}
+
+#email {
+    width: 20rem;
+}
+
+fieldset {
+    width: fit-content;
+}
+
+fieldset p {
+    padding: 0.5rem;
+}
+
+/* ----- GALERIA ----- */
+
+.galeria {
+    display: flex;
+    flex-direction: column;
+}
+
+.galeria article:nth-of-type(1) {
+    display: flex;
+    justify-content: center;
+}
+
+video {
+    width: 70%;
+}
+
+.galeria article:nth-of-type(2) {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.galeria article:nth-of-type(2) h2 {
+    padding: 4rem 4rem 2rem 4rem;
+}
+
+.galeria div {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+
+.galeria img {
+    width: 30rem;
+}
+
+/* ----- SOBRE MI ----- */
+
+.sobreMi {
+    display: block;
+    background-color: white;
+}
+
+.sobreMi h2 {
+    padding: 4rem 4rem 2rem 4rem;
+}
+
+.sobreMi p {
+    font-size: 1.2rem;
+}
+
+.sobreMi article:nth-of-type(1) {
+    text-align: center;
+}
+
+.sobreMi article:nth-of-type(2) {
+    text-align: justify;
+    padding-bottom: 3rem;
+}
+
+/* ----- MEDIAQUERYS ----- */
+
+/* ----- TABLETS ----- */
+@media (max-width: 1024px) {
+    main {
+        grid-template-columns: 70% 30%;
+    }
+
+    .escuderias img {
+        width: 22rem;
+    }
+
+    .texto h3 {
+        font-size: 1.1rem;
+    }
+
+    .texto ul,
+    .texto p {
+        font-size: 0.8rem;
+    }
+
+    .galeria img {
+        width: 20rem;
+    }
+}
+
+/* ----- TABLETS SIN ASIDE (Se veía mal antes por culpa del aside) ----- */
+@media (max-width: 700px) {
+    nav {
+        justify-content: center;
+    }
+
+    nav a {
+        padding: 0.78rem;
+    }
+
+    main {
+        display: block;
+    }
+
+    section {
+        padding-right: 0;
+    }
+
+    aside {
+        height: 75vh;
+        position: static;
+    }
+}
+
+/* ----- MOVILES ----- */
+@media (max-width: 480px) {
+    nav {
+        height: fit-content;
+        text-align: center;
+    }
+
+    nav ul {
+        width: 100%;
+        display: block;
+    }
+
+    nav a {
+        display: block;
+        padding: 0.5rem 0;
+    }
+
+    .escuderias {
+        flex-direction: column;
+    }
+
+    .escuderias img {
+        width: 100%;
+        padding-bottom: 1rem;
+    }
+
+    .texto h3 {
+        font-size: 1.5rem;
+    }
+
+    .texto ul,
+    .texto p {
+        font-size: 1.1rem;
+    }
+
+    aside {
+        height: 75vh;
+    }
+}
